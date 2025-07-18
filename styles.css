@@ -37,3 +37,197 @@ h1, h2, h3 {
 
 /* ================================== Reset ends here =================================== */
 
+body {
+    display: grid;
+    /* grid-template-rows: 1fr 4fr; */
+    grid-template-rows: 20vh 1fr;
+    grid-template-columns: 1fr 4fr;
+}
+
+img {
+    width: 50px;
+    /* height: 50px; */
+    aspect-ratio: 1/1;
+    align-self: center;
+    margin: 0px 5px;
+    border-radius: 50%;
+}
+
+/* ================================== Header =================================== */
+
+.header {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+
+    padding: 10px 0px 0px 20px;
+    /* background-color: rgb(53, 107, 32); */
+    background-color: oklch(30% 0 0);
+    /* background-color: rgb(1, 4, 9); */
+}
+
+.search {
+    display: flex;
+}
+
+.search input {
+    width: 100%;
+    padding: 6px 16px;
+    border: 2px solid oklch(50% 0 0);
+    border-radius: 25px;
+    outline: none;
+    color: inherit;
+    background-color: oklch(20% 0 0);
+}
+
+.user {
+    display: flex;
+    justify-content: end;
+    padding-right: 20px;
+}
+
+.user-info {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 110px 3fr;
+}
+
+.user-info img {
+    grid-row: 1 / 3;
+    justify-self: end;
+    width: 80%;
+    aspect-ratio: 1/1;
+}
+
+.user-info h3 {
+    align-self: flex-end;
+    padding: 0px;
+    padding-left: 10px;
+}
+
+.user-info h1 {
+    align-self: flex-start;
+    padding: 0px;
+    padding-left: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.buttons button {
+    width: 120px;
+    height: 40px;
+    border-style: none;
+    border-radius: 500px;
+    font-size: 16px;
+    font-weight: 600;
+    /* color: oklch(95% 0 0); */
+    color: inherit;
+    background-color: oklch(60% 0.11 215);
+}
+
+
+/* ================================== Sidebar =================================== */
+
+.sidebar {
+    grid-row: 1 / 3;
+
+    display: grid;
+    gap: 50px;
+    grid-template-rows: 100px 400px 200px;
+
+    /* background-color: oklch(40% 0 0); */
+    background-color: oklch(30% 0.11 215);
+}
+
+.sidebar .title {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+
+    /* background-color: crimson; */
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: 60px 3fr;
+    align-items: center;
+
+    /* background-color: rgb(122, 111, 10); */
+}
+
+.nav-settings {
+    display: grid;
+    grid-template-columns: 60px 3fr;
+    align-items: center;
+
+    /* background-color: blueviolet; */
+}
+
+svg {
+    width: 60px;
+    height: 35px;
+    align-self: center;
+
+    /* background-color: oklch(20% 0 0); */
+}
+
+.title svg {
+    width: 50px;
+    height: 50px;
+}
+
+svg path {
+    fill: oklch(95% 0 0);
+}
+
+/* ================================== Main =================================== */
+
+.main {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 1fr;
+
+    /* background-color: brown; */
+    background-color: oklch(20% 0 0);
+
+}
+
+.main-left {
+    display: grid;
+    grid-template-rows: 50px 1fr;
+
+    padding: 20px;
+    background-color: brown;
+}
+
+.main-left h2 {
+    padding: 0;
+}
+
+.projects {
+    display: grid;
+    gap: 20px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+    background-color: green;
+}
+
+.grid-item {
+    background-color: rgb(55, 23, 85);
+}
+
+
+
+
+
+
+
+
