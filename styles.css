@@ -27,30 +27,33 @@ input, button, textarea, select {
   font: inherit;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* ================================== Reset ends here =================================== */
+
+h1, h2, h3 {
     padding: calc(1em / 2);
 }
 
 h1, h2, h3 {
     letter-spacing: 1px;
+    font-weight: 600;
 }
-
-/* ================================== Reset ends here =================================== */
 
 body {
     display: grid;
-    /* grid-template-rows: 1fr 4fr; */
     grid-template-rows: 20vh 1fr;
     grid-template-columns: 1fr 4fr;
 }
 
 img {
     width: 50px;
-    /* height: 50px; */
     aspect-ratio: 1/1;
     align-self: center;
     margin: 0px 5px;
     border-radius: 50%;
+}
+
+p {
+    color: oklch(85% 0 0);
 }
 
 /* ================================== Header =================================== */
@@ -62,9 +65,9 @@ img {
     align-items: center;
 
     padding: 10px 0px 0px 20px;
-    /* background-color: rgb(53, 107, 32); */
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
     background-color: oklch(30% 0 0);
-    /* background-color: rgb(1, 4, 9); */
 }
 
 .search {
@@ -124,9 +127,8 @@ img {
     border-radius: 500px;
     font-size: 16px;
     font-weight: 600;
-    /* color: oklch(95% 0 0); */
     color: inherit;
-    background-color: oklch(60% 0.11 215);
+    background-color: oklch(50% 0.11 215);
 }
 
 
@@ -139,7 +141,7 @@ img {
     gap: 50px;
     grid-template-rows: 100px 400px 200px;
 
-    /* background-color: oklch(40% 0 0); */
+    z-index: 2;
     background-color: oklch(30% 0.11 215);
 }
 
@@ -150,32 +152,24 @@ img {
     align-content: center;
     align-items: center;
     justify-items: center;
-
-    /* background-color: crimson; */
 }
 
 .nav {
     display: grid;
     grid-template-columns: 60px 3fr;
     align-items: center;
-
-    /* background-color: rgb(122, 111, 10); */
 }
 
 .nav-settings {
     display: grid;
     grid-template-columns: 60px 3fr;
     align-items: center;
-
-    /* background-color: blueviolet; */
 }
 
 svg {
     width: 60px;
     height: 35px;
     align-self: center;
-
-    /* background-color: oklch(20% 0 0); */
 }
 
 .title svg {
@@ -192,39 +186,99 @@ svg path {
 .main {
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1.25fr;
 
-    /* background-color: brown; */
     background-color: oklch(20% 0 0);
-
 }
 
 .main-left {
     display: grid;
-    grid-template-rows: 50px 1fr;
+    grid-template-rows: 40px 1fr;
 
     padding: 20px;
-    background-color: brown;
+    background-color: oklch(20% 0 0);
 }
 
-.main-left h2 {
+.main h2 {
+    align-self: end;
+    padding: 0 0 10px 0;
+}
+
+.main h3 {
     padding: 0;
 }
 
 .projects {
     display: grid;
     gap: 20px;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    /* grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 
-    background-color: green;
+    background-color: oklch(20% 0 0);
 }
 
 .grid-item {
-    background-color: rgb(55, 23, 85);
+    min-height: 200px;
+    padding: 20px;
+    overflow: hidden;
+
+    display: grid;
+
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+    border-left: 6px solid orange;
+    border-radius: 6px;
+    background-color: oklch(30% 0 0);
 }
 
+.item-svg {
+    place-self: end;
+}
 
+.main-right {
+    display: grid;
+    grid-template-rows: 40px 1fr 80px 1fr;
+
+    padding: 20px 20px 20px 0;
+    background-color: oklch(20% 0 0);
+}
+
+.announcements {
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+    background-color: oklch(30% 0 0);
+}
+
+.announcements hr {
+    margin: 20px 0;
+}
+
+.trending {
+    padding: 10px 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+    background-color: oklch(30% 0 0);
+}
+
+.trending img {
+    margin: 10px 10px 10px 0;
+}
+
+.user1, .user2, .user3, .user4 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* - below grid solution
+.user2 {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+} */
 
 
 
